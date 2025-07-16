@@ -1,11 +1,27 @@
 ---
-
 import Layout from "../layouts/Layout.astro";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <h1 class="text-bold font-semibold text-3xl text-center pt-10">✨ Bienvenido a Perea Corsini Propiedades ✨</h1>
+  <section class="relative w-full h-screen overflow-hidden">
+  <!-- 🎥 Video de fondo -->
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    class="absolute top-0 left-0 w-full h-full object-cover pointer-events-none"
+  >
+    <source src="/video/fondo.mp4" type="video/mp4" />
+  </video>
+
+  <!-- 🌑 Capa oscura para contraste -->
+  <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+  <!-- 📝 Contenido encima del video -->
+  <div class="relative z-20 h-full flex flex-col items-center justify-center text-white text-center px-4">
+    <h1 class="text-4xl md:text-6xl font-bold">Bienvenido a Perea-Corsini Propiedades</h1>
+    <p class="mt-4 text-lg md:text-2xl">Tu lugar, tu historia, tu nuevo hogar</p>
+  </div>
+</section>
 </Layout>
